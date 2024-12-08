@@ -1,0 +1,36 @@
+﻿<Window x:Class="Практическая_работа__11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая_работа__11"
+        mc:Ignorable="d"
+        Title="Практическая работа №11" Height="350" Width="400" WindowStartupLocation="CenterScreen" FontSize="12" ResizeMode="NoResize" Icon="/game074.ico">
+    <Grid>
+        <StackPanel>
+            <Menu>
+                <MenuItem Header="Файл">
+                    <MenuItem Header="1 строка" Click="btnFirstString_Click"/>
+                    <MenuItem Header="2 строка" Click="btnSecondString_Click"/>
+                    <MenuItem Header="Очистка" Click="btnClear_Click"/>
+                    <MenuItem Header="Найти сопадения" Click="FindMatches_Click"/>
+                </MenuItem>
+                <MenuItem Header="Справка">
+                    <MenuItem Header="О создателе" Click="btnInfoSozdatel_Click"/>
+                    <MenuItem Header="О программе" Click="btnInfoProga_Click"/>
+                </MenuItem>
+                <MenuItem Header="Выход" Click="btnClose_Click"/>
+            </Menu>
+            <Label Content="Вводимая строка:" Margin="10,0,260,0"/>
+            <TextBox Name="InputString" Margin="10,0,10,10" VerticalAlignment="Top" Height="40" IsReadOnly="True"/>
+
+            <Label Content="Регулярное выражение:" Margin="10,0,230,0"/>
+            <TextBox Name="RegexPattern" Margin="10,0,10,0" Height="30" IsReadOnly="True"/>
+
+            <Button Content="Найти совпадения" Margin="135,10,135,10" Height="25" Click="FindMatches_Click"/>
+
+            <Label Content="Результат:" Margin="10,0,300,0"/>
+            <TextBox Name="Results" Margin="10,0,10,0" Height="85" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
